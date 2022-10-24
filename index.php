@@ -9,6 +9,10 @@
 		$alg = $_GET["alg"];
 		$query = $_GET["query"];
 	}
+
+	if (strpos($base, "..") !== false) {
+		die("puto maricón, que haces");
+	}
 	
 	function getObjectsIter($path) {
 		$objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
@@ -123,7 +127,7 @@
 		<h2>ARFNET Search Engine</h2>
 		<br>
 		<div class="form">
-			<form action="/search.php" method="GET">
+			<form action="/search/index.php" method="GET">
 				<select class="searchbar" name="base">
 					<option <?php if ($base == "FTPServer/") echo "selected"; 	?> value="FTPServer/">FTPServer</option>
 					<option <?php if ($base == "source/") echo "selected"; 		?> value="source/">source</option>
