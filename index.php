@@ -130,7 +130,7 @@
 			<form action="/search/index.php" method="GET">
 				<select class="searchbar" name="base">
 					<option <?php if ($base == "FTPServer/") echo "selected"; 	?> value="FTPServer/">FTPServer</option>
-					<option <?php if ($base == "source/") echo "selected"; 		?> value="source/">source</option>
+					<option <?php if ($base == "source/repos/") echo "selected"; 		?> value="source/">source</option>
 				</select>
 				<select class="searchbar" name="alg">
 					<option <?php if ($alg == "str_contains") echo "selected"; 	?> value="str_contains">str_contains</option>
