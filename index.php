@@ -144,6 +144,7 @@
 		<?php
 			if ($search) {
 				if ($query == "") die("empty query");
+				if ($base != "FTPServer/" && $base != "source/repos/") die("No other based allowed, fuck you.");
 				if (strpos($query, "<") === false) { } else { die("No <> allowed, fuck you."); }
 				
 				$time_start = microtime(true); 
